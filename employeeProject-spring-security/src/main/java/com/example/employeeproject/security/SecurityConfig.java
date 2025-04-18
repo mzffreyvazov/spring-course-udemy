@@ -18,17 +18,17 @@ public class SecurityConfig {
     public InMemoryUserDetailsManager userDetailsService() {
 
         UserDetails john = User.withUsername("john")
-                .password("{noop}password123") // {noop} indicates that the password is stored in plain text
+                .password("{noop}password123") 
                 .roles("EMPLOYEE")
                 .build();
 
         UserDetails marry = User.withUsername("marry")
-                .password("{noop}password123") // {noop} indicates that the password is stored in plain text
+                .password("{noop}password123") 
                 .roles("EMPLOYEE", "MANAGER")
                 .build();
 
         UserDetails Katy = User.withUsername("katy")
-                .password("{noop}password123") // {noop} indicates that the password is stored in plain text
+                .password("{noop}password123") 
                 .roles("EMPLOYEE", "ADMIN", "MANAGER")
                 .build();
 
@@ -49,7 +49,7 @@ public class SecurityConfig {
 
                 .requestMatchers(HttpMethod.DELETE, "/employee/**").hasRole("ADMIN")
                 .anyRequest().authenticated())
-            .httpBasic(Customizer.withDefaults()) // Enable basic authentication
+            .httpBasic(Customizer.withDefaults()) 
             .csrf(AbstractHttpConfigurer::disable); 
 
         return http.build();
