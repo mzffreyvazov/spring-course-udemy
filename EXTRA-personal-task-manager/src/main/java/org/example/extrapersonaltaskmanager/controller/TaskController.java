@@ -1,12 +1,9 @@
 package org.example.extrapersonaltaskmanager.controller;
 
-import org.example.extrapersonaltaskmanager.Exception.ErrorResponse.AddingMultipleTaskUnsuccessfull;
-import org.example.extrapersonaltaskmanager.Exception.ErrorResponse.TaskErrorResponse;
 import org.example.extrapersonaltaskmanager.Exception.Exceptions.AddingTodosNotSuccessfulException;
 import org.example.extrapersonaltaskmanager.Exception.Exceptions.TodoNotFoundException;
 import org.example.extrapersonaltaskmanager.entity.TaskEntity;
 import org.example.extrapersonaltaskmanager.service.TaskService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

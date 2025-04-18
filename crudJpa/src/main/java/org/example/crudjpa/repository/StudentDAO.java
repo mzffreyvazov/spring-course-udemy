@@ -15,7 +15,7 @@ public class StudentDAO implements StudentRepoInterface {
 
     private EntityManager entityManager;
 
-    @Autowired
+    
     public StudentDAO(EntityManager entityManager) {
         this.entityManager = entityManager;
 
